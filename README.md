@@ -6,3 +6,15 @@ Today, many people view websites on devices other than computers, such as smartp
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 - Another way we can deal with different devices is through media queries. Media queries are ways of changing the style of a page based on how the page is being viewed.
 - For an example of a media query, let’s try to simply change the color of the screen when it shrinks down to a certain size. We signal a media query by typing @media followed by the type of query in parentheses:
+
+            @media (min-width: 600px) {
+                body {
+                    background-color: red;
+                }
+            }
+
+            @media (max-width: 599px) {
+                body {
+                    background-color: blue;
+                }
+            }
