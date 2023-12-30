@@ -1,0 +1,3 @@
+# Flex Box
+
+Another way to deal with differing screen size is using a new CSS attribute known as a flexbox. This allows us to easily have elements wrap around to the next line if they don’t fit horizontally. We do this by putting all of our elements in a div that we’ll call our container. We then add some styling to that div specifying that we want to use a flexbox display for the elements inside of it. We’ve also added some additional styling to the inner divs to better illustrate the wrapping that’s occuring here.
