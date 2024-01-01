@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select color</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('select').onchange = function() {
+                document.querySelector('#hello').style.color = this.value;
+            }
+        });
+    </script>
 </head>
 <body>
     <h1 id="hello">Hello</h1>
