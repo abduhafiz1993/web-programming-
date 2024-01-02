@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <script>
+        document.addEventListener('DOMContentLoder', ()=>{
+
+            document.querySelector('form').onsubmit = () => {
+
+                    fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                    .then(reponse=> reponse.json())
+                    .then(data => {// Get currency from user input and convert to upper case
+            const currency = document.querySelector('#currency').value.toUpperCase();
+
+            // Get rate from data
+            const rate = data.rates[currency];
+
+            // Check if currency is valid:
+            if (rate !== undefined) {
+                // Display exchange on the screen
+                document.querySelector('#result').innerHTML = `1 USD is equal to ${rate.toFixed(3)} ${currency}.`;
+            }
+            else {
+                // Display error on the screen
+                document.querySelector('#result').innerHTML = 'Invalid Currency.';
+            }
+        })
+        // Catch any errors and log them to the console
+        .catch(error => {
+            console.log('Error:', error);
+        });
+        // Prevent default submission
+
+
+                
+                return false
+            }
+        })
+    </script>
+</head>
+<body>
+    <form>
+        <input id="currency" placeholder="Currency" type="text">
+        <input type="submit" value="Convert">
+    </form>
+    <div id="result"></div>
+</body>
+</html>
