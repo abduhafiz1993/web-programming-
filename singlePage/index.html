@@ -11,13 +11,17 @@
         }
     </style>
     <script>
-        function show(page){
-            document.querySelector('div').forEach(div => {
-                return div.style.display = "none";
-            })
+        document.addEventListener("DOMContentLoaded", function(){
+            function show(page){
+            document.querySelector('div').forEach( div => {
+            div.style.display = "none";
+            });
 
             document.querySelector(`#${page}`).style.display = 'block';
         }
+
+        })
+        
     </script>
 </head>
 <body>
