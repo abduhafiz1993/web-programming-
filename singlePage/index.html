@@ -1,57 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>single page</title>
-    <style>
-        div {
-            display: none;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            function show(page){
-            document.querySelectorAll('div').forEach( div => {
-            div.style.display = "none";
-            });
-
-            document.querySelector(`#${page}`).style.display = 'block';
-        }
-
-        document.querySelectorAll('button').forEach(button =>{
-
-            button.onclick = () => {
-                show(this.dataset.page)
+    <head>
+        <title>Single Page</title>
+        <style>
+            div {
+                display: none;
             }
-        })
-
-        })
-        
-    </script>
-</head>
-<body>
-    <button data-page = "1">page1</button>
-    <button data-page = "2">page2</button>
-    <button data-page = "3">page3</button>
-    <button data-page = "4">page4</button>
-
-    <div id="1">
-        <p>bvolbi bwoheop oueh'peh rih woauogwepf[ awiohr wi wgj[ ouwgfwi yivvyia bauoh vwuorgh wwi hugwrghb'wuo'g  gbwuoghpwr page1</p>
-    </div>
-    <div id="2">
-        <p>bvolbi bwoheop oueh'peh rih woauogwepf[ awiohr wi wgj[ ouwgfwi yivvyia bauoh vwuorgh wwi hugwrghb'wuo'g  gbwuoghpwr page2</p>
-        
-    </div>
-    <div id="3">
-        <p>bvolbi bwoheop oueh'peh rih woauogwepf[ awiohr wi wgj[ ouwgfwi yivvyia bauoh vwuorgh wwi hugwrghb'wuo'g  gbwuoghpwr page3</p>
-        
-    </div>
-    <div id="4">
-        <p>bvolbi bwoheop oueh'peh rih woauogwepf[ awiohr wi wgj[ ouwgfwi yivvyia bauoh vwuorgh wwi hugwrghb'wuo'g  gbwuoghpwr page4</p>
-        
-    </div>
-
-</body>
-</html>
+        </style>
+        <script src="singlepage.js"></script>
+    </head>
+    <body>
+        <button data-page="page1">Page 1</button>
+        <button data-page="page2">Page 2</button>
+        <button data-page="page3">Page 3</button>
+        <div id="page1">
+            <h1>This is page 1</h1>
+        </div>
+        <div id="page2">
+            <h1>This is page 2</h1>
+        </div>
+        <div id="page3">
+            <h1>This is page 3</h1>
+        </div>
+    </body>
