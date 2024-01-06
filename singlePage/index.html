@@ -20,6 +20,13 @@
             document.querySelector(`#${page}`).style.display = 'block';
         }
 
+        document.querySelector('button').forEach(button =>{
+
+            button.onclick = () => {
+                show(this.dataset.page)
+            }
+        })
+
         })
         
     </script>
