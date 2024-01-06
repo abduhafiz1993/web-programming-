@@ -13,14 +13,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             function show(page){
-            document.querySelector('div').forEach( div => {
+            document.querySelectorAll('div').forEach( div => {
             div.style.display = "none";
             });
 
             document.querySelector(`#${page}`).style.display = 'block';
         }
 
-        document.querySelector('button').forEach(button =>{
+        document.querySelectorAll('button').forEach(button =>{
 
             button.onclick = () => {
                 show(this.dataset.page)
