@@ -18,3 +18,14 @@ Today, many people view websites on devices other than computers, such as smartp
                     background-color: blue;
                 }
             }
+
+
+####  infintie scroll
+
+
+window.onscroll = () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        load();
+    }
+};
+
