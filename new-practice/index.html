@@ -38,9 +38,22 @@
     </style>
 
     <script>
-        document.querySelector('button').onclick = () => {
-            if()
+        document.addEventListener('DOMContentLoaded', function() {
+            h1.style.animationPlaystate = 'paused'
+            
+            document.querySelector('button').onclick = () => {
+            const h1 = document.querySelector('h1');
+
+
+            if(h1.style.animationPlaystate == 'paused') {
+            h1.style.animationPlayState = 'running';     
+            }
+            else{
+                h1.style.animationPlayState = 'paused'
+            }
         }
+        })
+        
     </script>
 </head>
 <body>
