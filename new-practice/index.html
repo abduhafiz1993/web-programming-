@@ -7,29 +7,44 @@
     <title>animation</title>
     <style>
        @keyframes increaseName {
-        from {
+        0% {
             font-size: xx-small;
+            left: 0%;
         }
-        to{
+        50% {
             font-size: xx-large;
+            left: 0%;
+
+        }
+        75% {
+            left: 45%;
+            font-size: xx-large;
+        }
+        100% {
+            left: 50%;
         }
         
        } 
 
        h1{
-
+        position: relative;
         animation-name: increaseName;
         animation-duration: 2s;
-        animation-fill-mode: backwards;
-        animation-iteration-count: 4;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
        }
     </style>
 
     <script>
-
+        document.querySelector('button').onclick = () => {
+            if()
+        }
     </script>
 </head>
 <body>
     <h1>coding is going to be intersting</h1>
+    <button>Stop running</button>
 </body>
 </html>
