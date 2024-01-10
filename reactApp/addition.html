@@ -8,6 +8,7 @@
     </head>
     <body>
         <div id="app"></div>
+        
 
         <script type="text/babel">
             function App() {
@@ -30,10 +31,37 @@
 
                 }
 
+                function inputKeyPress(event)
+                {
+                    if (event.key === "Enter") {
+                        const answer = parseInt(state.response);
+                        if (ansewr === state.num1 + state.num2) {
+                            // User Got Question right
+                            setState({
+                                ...state,
+                                score: state.score + 1,
+                                response: "",
+                                num1: Math.ceil(Math.random() * 10),
+                                num2: Math.ceil(Math.random() * 10)
+                            });
+                        } else {
+                            //User got question wrong
+
+                            setState({
+                                ...state,
+                                score: state.score -1,
+                                response: ""
+                            })
+
+                        }
+                    }
+
+                }
+
                 return (
                     <div>
                         <div>{state.num1} + {state.num2}</div>
-                        <input onChange = {updateResponse} value ={state.response}/>
+                        <input onKeyPress = {inputKeyPress} onChange = {updateResponse} value ={state.response}/>
                         <div> Score: {state.score}</div>
                     </div>
                 );
