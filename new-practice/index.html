@@ -34,25 +34,27 @@
         animation-direction: alternate;
         animation-delay: 1s;
         animation-iteration-count: infinite;
+        animation-play-state: paused;
        }
     </style>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            h1.style.animationPlaystate = 'paused'
-            
-            document.querySelector('button').onclick = () => {
+            document.addEventListener('DOMContentLoaded', function() {
             const h1 = document.querySelector('h1');
+            console.log("starting");
+
+            document.querySelector('button').onclick = () => {
+                console.log("clicked");
+                if (h1.style.animationPlayState === 'paused') {
+                h1.style.animationPlayState = 'running';
+                } else {
+                h1.style.animationPlayState = 'paused';
+                }
+            };
+        });
 
 
-            if(h1.style.animationPlaystate == 'paused') {
-            h1.style.animationPlayState = 'running';     
-            }
-            else{
-                h1.style.animationPlayState = 'paused'
-            }
-        }
-        })
+    
         
     </script>
 </head>
