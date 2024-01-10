@@ -11,9 +11,19 @@
 
         <script type="text/babel">
             function App() {
+
+                const [state, setState] = React.useState({
+                    num1: 1,
+                    num2: 1,
+                    response: "",
+                    score:0
+                })
+
                 return (
                     <div>
-                        
+                        <div>{state.num1} + {state.num2}</div>
+                        <input value ={state.response}/>
+                        <div> Score: {state.score}</div>
                     </div>
                 );
             }
