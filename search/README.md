@@ -4,23 +4,41 @@
 
 ##### Design a front-end for Google Search, Google Image Search, and Google Advanced Search.
 
-### specification
+# Google Search Clone
 
-Your website must meet the following requirements:
+This project is a simple HTML-based Google Search clone. It includes three pages: 
+1. **Search Page (`index.html`):**
+    - Allows users to perform a standard Google search.
+    - Contains links to "Google Images" and "Google Advanced Search."
 
-- Your website should have at least three pages: one for regular Google Search (which must be called index.html), one for Google Image Search, and one for Google Advanced Search.
-- On the Google Search page, there should be links in the upper-right of the page to go to Image Search or Advanced Search. On each of the other two pages, there should be a link in the upper-right to go back to Google Search.
-- On the Google Search page, the user should be able to type in a query, click “Google Search”, and be taken to the Google search results for that page.
-- Like Google’s own, your search bar should be centered with rounded corners. The search button should also be centered, and should be beneath the search bar.
-- On the Google Image Search page, the user should be able to type in a query, click a search button, and be taken to the Google Image search results for that page.
-- On the Google Advanced Search page, the user should be able to provide input for the following four fields (taken from Google’s own advanced search options)
-    Find pages with… “all these words:”
-    Find pages with… “this exact word or phrase:”
-    Find pages with… “any of these words:”
-    Find pages with… “none of these words:”
-- Like Google’s own Advanced Search page, the four options should be stacked vertically, and all of the text fields should be left aligned.
-- Consistent with Google’s own CSS, the “Advanced Search” button should be blue with white text.
-- When the “Advanced Search” button is clicked, the user should be taken to the search results page for their given query.
-- Add an “I’m Feeling Lucky” button to the main Google Search page. Consistent with Google’s own behavior, clicking this link should take users directly to the first Google search result for the query, bypassing the normal results page.
-- You may encounter a redirect notice when using the “I’m Feeling Lucky” button. Not to worry! This is an expected consequence of a security feature implemented by Google.
-- The CSS you write should resemble Google’s own aesthetics.
+2. **Advanced Search Page (`advanced.html`):**
+    - Provides an advanced search form with additional search options.
+    - Users can search for pages with specific words, exact phrases, any of these words, or none of these words.
+
+3. **Image Search Page (`images.html`):**
+    - Allows users to perform an image search.
+    - Contains links to "Google Search" and "Google Advanced Search."
+
+## Project Structure
+
+### Search Page (`index.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set viewport width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Search</title>
+</head>
+<body>
+    <!-- HEADER START -->
+    <!-- ... -->
+    <!-- HEADER END -->
+    <!-- SEARCH CONTAINER START -->
+    <!-- ... -->
+    <!-- SEARCH CONTAINER END -->
+</body>
+</html>
